@@ -90,6 +90,7 @@ Set action
 Action is what an agent can do in each state. Here, turtlebot3 has always 0.15 m/s of linear velocity. angular velocity is determined by action.
 
 Action	Angular velocity(rad/s)
+```
 --------------
 | 0	 |  -1.5  |
 | 1 	| 	-0.75 |
@@ -97,6 +98,7 @@ Action	Angular velocity(rad/s)
 | 3	 |  0.75  |
 | 4	 |  1.5   |
 ---------------
+```
 Set reward
 When turtlebot3 takes an action in a state, it receives a reward. The reward design is very important for learning. A reward can be positive or negative. When turtlebot3 gets to the goal, it gets big positive reward. When turtlebot3 collides with an obstacle, it gets big negative reward. If you want to apply your reward design, modify setReward function at /turtlebot3_machine_learning/turtlebot3_dqn/src/turtlebot3_dqn/environment_stage_#.py.
 
