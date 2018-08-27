@@ -35,12 +35,27 @@ You can install TensorFlow.
 <pre>$ conda create -n tensorflow pip python=2.7</pre>
 This tutorial is used python 2.7(CPU only). If you want to use another python version and GPU, please refer to TensorFlow.
 
+Activate virtual environment 
+<pre>$ source activate tensorflow </pre>
+
 <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
 #### Keras
 Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow.
 
 <pre> $ pip install keras </pre>
+
+#### Install requirements and clone turtlebot packages
+
+<pre> sudo apt-get install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation ros-kinetic-interactive-markers </pre> 
+ 
+<pre> cd ~/catkin_ws/src/ </pre> 
+<pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git </pre> 
+<pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3.git </pre>
+<pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git</pre> 
+<pre> cd ~/catkin_ws && catkin_make </pre> 
+<pre> export TURTLEBOT3_MODEL=burger </pre> 
+
 
 #### Machine Learning packages
 WARNING: Please install turtlebot3, turtlebot3_msgs and turtlebot3_simulations package before installing this package.
