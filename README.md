@@ -12,7 +12,7 @@ To do this tutorial, you need to install Tensorflow, Keras and Anaconda with Ubu
 http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 ### Anaconda
-You can download Anaconda 5.2 for Python 2.7 version.
+You can download Anaconda 5.2[https://www.anaconda.com/download/#linux] for Python 2.7 version.
 
 After downloading Andaconda, go to the directory in located download file and enter the follow command.
 
