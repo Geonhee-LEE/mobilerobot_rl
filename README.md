@@ -9,7 +9,7 @@ We are preparing a four-step reinforcement learning tutorial.
 
 ## Installation
 To do this tutorial, you need to install Tensorflow, Keras and Anaconda with Ubuntu 16.04 and ROS kinetic.
-
+http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 ### Anaconda
 You can download Anaconda 5.2 for Python 2.7 version.
@@ -17,8 +17,8 @@ You can download Anaconda 5.2 for Python 2.7 version.
 After downloading Andaconda, go to the directory in located download file and enter the follow command.
 
 <pre> $ bash Anaconda2-x.x.x-Linux-x86_64.sh</pre>
-After installing Anaconda,
 
+After installing Anaconda,
 
 <pre> $ source ~/.bashrc </pre> 
 <pre> $ python -V</pre>
@@ -117,16 +117,18 @@ First install the latest version of Qt. I was using the free open source edition
 First download the installer:
 
 
-cd ~/Downloads
-wget https://download.qt.io/official_releases/qt/5.9/5.9.2/qt-opensource-linux-x64-5.9.2.run
+
+<pre>  cd ~/Downloads </pre> 
+
+<pre>  wget https://download.qt.io/official_releases/qt/5.9/5.9.2/qt-opensource-linux-x64-5.9.2.run </pre> 
 
 
 
 Next, adjust the permissions and install Qt:
 
 
-chmod +x qt-opensource-linux-x64-5.9.2.run
-./qt-opensource-linux-x64-5.9.2.run
+<pre>  chmod +x qt-opensource-linux-x64-5.9.2.run </pre> 
+<pre> ./qt-opensource-linux-x64-5.9.2.run </pre> 
 
 Now, that should have installed Qt5.x on your Ubuntu installation, it is time to install PyQt5 such that it uses Qt5 with Python 2.7. The key in this setup procedure is to build PyQt5 yourself.
 
@@ -134,38 +136,38 @@ First, SIP must be installed before proceeding with building PyQt5. You can down
 
 
 
-https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz
+<pre>  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz </pre> 
 
 
 Now is where things get important, as I always prefer to use virtual environments when working with Python, rather than installing everything on the global Python installation. After extracting the file, make sure to run configure.py using your virtual environment’s Python!
 
 
 
-tar xvf sip-4.19.6.tar.gz
-cd sip-4.19.6/
-~/path/to/virtualenv/python configure.py
+<pre> tar xvf sip-4.19.6.tar.gz </pre> 
+<pre> cd sip-4.19.6/ </pre> 
+<pre> ~/path/to/virtualenv/python configure.py </pre> 
 
 If the configuration was successful, the output should tell you that things related to SIP will be installed in your virtual environment’s folder, and NOT in your global Python that resides in /usr.
 
 Now, running make and sudo make install will install SIP into your virtual environment folder, even if you are using sudo.
 
-make
-sudo make install
+<pre> make </pre> 
+<pre> sudo make install </pre> 
 
 
 Now it is time to download PyQt5 and build it!
 
 
 
-wget https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.9.2/PyQt5_gpl-5.9.2.tar.gz
+<pre> wget https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.9.2/PyQt5_gpl-5.9.2.tar.gz </pre> 
 
 
 Configuration of PyQt5 is needed for building it. Again, using the right interpreter and the right parameters are key.
 
 
-~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake
+<pre> ~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake
 make
-make install
+make install</pre> 
 
 
 Now, assuming there are no errors, you should be able to run ‘import PyQt5’ in your virtual environment running Python 2.7!
