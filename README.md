@@ -38,12 +38,12 @@ This tutorial is used python 2.7(CPU only). If you want to use another python ve
 Activate virtual environment 
 <pre>$ source activate tensorflow </pre>
 
-<pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
+conda <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
 #### Keras
 Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow.
 
-<pre> $ pip install keras </pre>
+conda <pre> $ pip install keras </pre>
 
 #### Install requirements and clone turtlebot packages
 
@@ -116,9 +116,9 @@ memory	1000000	The size of replay memory.
 
 #### Run Machine Learning
 
-<pre> $ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
-<pre> $ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
-Conda <pre> $ roslaunch turtlebot3_dqn turtlebot3_dqn_stage_1.launch</pre> 
+<pre>  roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
+conda <pre>  roslaunch turtlebot3_dqn result_graph.launch </pre> 
+conda <pre> roslaunch turtlebot3_dqn turtlebot3_dqn_stage_1.launch</pre> 
 
 
 ### Building PyQT5 with Python 2.7 on Ubuntu 16.04 (http://www.powerbrowsing.com/2017/12/building-pyqt5-with-python-2-7-on-ubuntu-16-04/)
