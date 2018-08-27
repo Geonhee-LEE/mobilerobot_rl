@@ -105,9 +105,9 @@ memory	1000000	The size of replay memory.
 <pre> $ roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
 Conda <pre> $ roslaunch turtlebot3_dqn turtlebot3_dqn_stage_1.launch</pre> 
 
-### Solution of PyQt5
 
-Building PyQT5 with Python 2.7 on Ubuntu 16.04
+### Building PyQT5 with Python 2.7 on Ubuntu 16.04 (http://www.powerbrowsing.com/2017/12/building-pyqt5-with-python-2-7-on-ubuntu-16-04/)
+
 So you want Qt5, but you have a lot of strict dependencies holding you back from going to Python 3. What to do? Go build everything yourself!
 
 The following are steps based on a fresh install of Ubuntu 16.04, so adapt it per your needs.
@@ -145,7 +145,7 @@ Now is where things get important, as I always prefer to use virtual environment
 
 <pre> tar xvf sip-4.19.6.tar.gz </pre> 
 <pre> cd sip-4.19.6/ </pre> 
-<pre> ~/path/to/virtualenv/python configure.py </pre> 
+<pre> ~/path/to/virtualenv/python configure.py </pre> (build configure.py using python command in virtualenv )
 
 If the configuration was successful, the output should tell you that things related to SIP will be installed in your virtual environment’s folder, and NOT in your global Python that resides in /usr.
 
@@ -165,9 +165,10 @@ Now it is time to download PyQt5 and build it!
 Configuration of PyQt5 is needed for building it. Again, using the right interpreter and the right parameters are key.
 
 
-<pre> ~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake
-make
-make install</pre> 
+<pre> ~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake</pre> 
+(build configure.py using python command in virtualenv )
+<pre> make</pre> 
+<pre> make install</pre> 
 
 
 Now, assuming there are no errors, you should be able to run ‘import PyQt5’ in your virtual environment running Python 2.7!
@@ -176,4 +177,5 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 # reference 
 
 [1]. http://emanual.robotis.com/docs/en/platform/turtlebot3/machine_learning/#machine-learning
+
 [2]. https://github.com/erlerobot/gym-gazebo
