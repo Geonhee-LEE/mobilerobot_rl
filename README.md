@@ -92,11 +92,11 @@ Action is what an agent can do in each state. Here, turtlebot3 has always 0.15 m
 Action	Angular velocity(rad/s)
 ```
 --------------
-| 0	 |  -1.5  |
-| 1 	| 	-0.75 |
-| 2	 |  	0    | 
-| 3	 |  0.75  |
-| 4	 |  1.5   |
+| 0	 :  -1.5  |
+| 1 	: 	-0.75 |
+| 2	 :  	0    | 
+| 3	 :  0.75  |
+| 4	 :  1.5   |
 ---------------
 ```
 Set reward
