@@ -197,3 +197,6 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 [1]. http://emanual.robotis.com/docs/en/platform/turtlebot3/machine_learning/#machine-learning
 
 [2]. https://github.com/erlerobot/gym-gazebo
+
+[3]. http://wiki.ros.org/openai_ros
+
