@@ -7,36 +7,40 @@ This application is reinforcement learning with DQN (Deep Q-Learning). The reinf
 This shows reinforcement learning with TurtleBot3 in gazebo. This reinforcement learning is applied DQN(Deep Q-Learning) algorithm with LDS.
 We are preparing a four-step reinforcement learning tutorial.
 
+
 ## Installation
 To do this tutorial, you need to install Tensorflow, Keras and Anaconda with Ubuntu 16.04 and ROS kinetic.
 http://wiki.ros.org/kinetic/Installation/Ubuntu
+
 
 ### Anaconda
 You can download Anaconda 5.2[https://www.anaconda.com/download/#linux] for Python 2.7 version.
 
 After downloading Andaconda, go to the directory in located download file and enter the follow command.
 
-<pre> $ bash Anaconda2-x.x.x-Linux-x86_64.sh</pre>
+<pre> bash Anaconda2-x.x.x-Linux-x86_64.sh </pre>
 
 After installing Anaconda,
 
-<pre> $ source ~/.bashrc </pre> 
-<pre> $ python -V</pre>
+<pre> source ~/.bashrc </pre> 
+<pre> python -V</pre> 
+
 If Anaconda is installed, you can see Python 2.7.xx :: Anaconda, Inc..
 
 ### ROS dependency packages
 To use ROS and Anaconda together, you must additionally install ROS dependency packages.
 
-<pre>$ pip install -U rosinstall msgpack empy defusedxml netifaces</pre>
+<pre>$ pip install -U rosinstall msgpack empy defusedxml netifaces </pre>
 
-#### Tensorflow
+#### Tensorflow 
+
 You can install TensorFlow.
 
 <pre>$ conda create -n tensorflow pip python=2.7</pre>
 This tutorial is used python 2.7(CPU only). If you want to use another python version and GPU, please refer to TensorFlow.
 
 Activate virtual environment 
-<pre>$ source activate tensorflow </pre>
+<pre> source activate tensorflow </pre>
 
 conda <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
@@ -60,9 +64,9 @@ conda <pre> $ pip install keras </pre>
 #### Machine Learning packages
 WARNING: Please install turtlebot3, turtlebot3_msgs and turtlebot3_simulations package before installing this package.
 
-<pre> $ cd ~/catkin_ws/src/ </pre> 
-<pre> $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning.git </pre> 
-<pre> $ cd ~/catkin_ws && catkin_make</pre> 
+<pre> cd ~/catkin_ws/src/ </pre> 
+<pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning.git </pre> 
+<pre> cd ~/catkin_ws && catkin_make</pre> 
 
 Set parameters
 The goal of DQN Agent is to get the TurtleBot3 to the goal avoiding obstacles. When TurtleBot3 gets closer to the goal, it gets a positive reward, and when it gets farther it gets a negative reward. The episode ends when the TurtleBot3 crashes on an obstacle or after a certain period of time. During the episode, TurtleBot3 gets a big positive reward when it gets to the goal, and TurtleBot3 gets a big negative reward when it crashes on an obstacle.
