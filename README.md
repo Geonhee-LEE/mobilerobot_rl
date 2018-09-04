@@ -35,7 +35,7 @@ To use ROS and Anaconda together, you must additionally install ROS dependency p
 
 <pre>$ pip install -U rosinstall msgpack empy defusedxml netifaces </pre>
 
-#### Tensorflow 
+#### Tensorflow (https://www.tensorflow.org/install/install_linux#the_url_of_the_tensorflow_python_package)
 
 You can install TensorFlow.
 
@@ -45,8 +45,9 @@ This tutorial is used python 2.7(CPU only). If you want to use another python ve
 Activate virtual environment 
 <pre> source activate tensorflow </pre>
 
-conda <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
+conda(cpu) <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
+conda(gpu) <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.1-cp27-none-linux_x86_64.whl</pre>
 #### Keras
 
 Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow.
