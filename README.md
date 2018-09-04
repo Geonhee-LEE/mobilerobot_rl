@@ -197,6 +197,8 @@ Now, running make and sudo make install will install SIP into your virtual envir
 Now it is time to download PyQt5 and build it!
 
 
+<pre> cd ~/Download </pre> 
+
 
 <pre> wget https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.9.2/PyQt5_gpl-5.9.2.tar.gz </pre> 
 
@@ -210,6 +212,8 @@ Build configure.py using python command in virtualenv
 
 ```
 ex)(conda) python configure.py -d ~/anaconda2/envs/tensorflow_mobilerobot/lib/python2.7/site-packages/   --sip=~/anaconda2/envs/tensorflow_mobilerobot/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake  ~/Qt5.9.2/5.9.2/gcc_64/bin/qmake 
+or
+python configure.py
 ```
 
 
