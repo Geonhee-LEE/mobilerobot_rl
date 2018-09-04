@@ -5,7 +5,7 @@ This application is reinforcement learning with DQN (Deep Q-Learning). The reinf
 
 
 This shows reinforcement learning with TurtleBot3 in gazebo. This reinforcement learning is applied DQN(Deep Q-Learning) algorithm with LDS.
-We are preparing a four-step reinforcement learning tutorial.
+We are preparing a four-step reinforcement learning tutorial.  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz 
 
 
 ## Installation
@@ -164,8 +164,7 @@ Now, that should have installed Qt5.x on your Ubuntu installation, it is time to
 First, SIP must be installed before proceeding with building PyQt5. You can download SIP from here. You can also just wget it!
 
 
-
-<pre>  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz </pre> 
+  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz 
 
 
 Now is where things get important, as I always prefer to use virtual environments when working with Python, rather than installing everything on the global Python installation. After extracting the file, make sure to run configure.py using your virtual environment’s Python!
