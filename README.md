@@ -177,6 +177,7 @@ Now is where things get important, as I always prefer to use virtual environment
 
 Build configure.py using python command in virtualenv
 <pre> ~/path/to/virtualenv/python configure.py </pre> 
+
 ```
 ex)(conda) python configure.py 
 ```
@@ -201,6 +202,8 @@ Configuration of PyQt5 is needed for building it. Again, using the right interpr
 Build configure.py using python command in virtualenv 
 
 <pre> ~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake</pre> 
+
+
 ```
 ex)(conda) python configure.py -d ~/anaconda2/envs/tensorflow_mobilerobot/lib/python2.7/site-packages/   --sip=~/anaconda2/envs/tensorflow_mobilerobot/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake
 ```
