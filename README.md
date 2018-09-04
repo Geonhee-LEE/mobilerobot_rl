@@ -164,7 +164,8 @@ Now, that should have installed Qt5.x on your Ubuntu installation, it is time to
 First, SIP must be installed before proceeding with building PyQt5. You can download SIP from here. You can also just wget it!
 
 
-  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz 
+Download here:
+ https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz 
 
 
 Now is where things get important, as I always prefer to use virtual environments when working with Python, rather than installing everything on the global Python installation. After extracting the file, make sure to run configure.py using your virtual environment’s Python!
