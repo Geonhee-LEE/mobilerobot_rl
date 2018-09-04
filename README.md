@@ -196,6 +196,7 @@ Configuration of PyQt5 is needed for building it. Again, using the right interpr
 
 <pre> ~/my_virtual_env_path/to/python configure.py -d ~/my_virtual_env_path/lib/python2.7/site-packages/ --sip=/my_virtual_env_path/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake ~/Qt5.9.0/5.9.0/gcc_64/bin/qmake</pre> 
 (build configure.py using python command in virtualenv )
+
 <pre> make</pre> 
 <pre> make install</pre> 
 
