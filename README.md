@@ -212,3 +212,8 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 
 [3]. http://wiki.ros.org/openai_ros
 
+[4]. http://scriptedonachip.com/pytorch-ros
+
+[5]. https://github.com/lakehanne/soft-neuro-adapt
+
+
