@@ -47,7 +47,7 @@ Activate virtual environment
 
 conda(cpu) <pre> pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
-conda(gpu), only cuda9.0 supported <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.1-cp27-none-linux_x86_64.whl</pre>
+conda(gpu), only cuda9.0 supported <pre> pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.1-cp27-none-linux_x86_64.whl</pre>
 
 
 #### Keras
