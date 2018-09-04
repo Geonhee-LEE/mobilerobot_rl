@@ -5,7 +5,8 @@ This application is reinforcement learning with DQN (Deep Q-Learning). The reinf
 
 
 This shows reinforcement learning with TurtleBot3 in gazebo. This reinforcement learning is applied DQN(Deep Q-Learning) algorithm with LDS.
-We are preparing a four-step reinforcement learning tutorial.  https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.6/sip-4.19.6.tar.gz 
+We are preparing a four-step reinforcement learning tutorial. 
+
 
 
 ## Installation
