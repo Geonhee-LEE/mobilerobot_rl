@@ -64,8 +64,6 @@ conda <pre> pip install keras </pre>
 <pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git </pre> 
 <pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3.git </pre>
 <pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git</pre> 
-<pre> cd ~/catkin_ws && catkin_make </pre> 
-<pre> export TURTLEBOT3_MODEL=burger </pre> 
 
 
 #### Machine Learning packages
@@ -131,6 +129,7 @@ memory	1000000	The size of replay memory.
 
 #### Run Machine Learning
 
+<pre> export TURTLEBOT3_MODEL=burger </pre> 
 <pre>  roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
 conda <pre>  roslaunch turtlebot3_dqn result_graph.launch </pre> 
 conda <pre> roslaunch turtlebot3_dqn turtlebot3_dqn_stage_1.launch</pre> 
