@@ -183,7 +183,10 @@ Build configure.py using python command in virtualenv
 <pre> ~/path/to/virtualenv/python configure.py </pre> 
 
 ```
-ex)(conda) python configure.py 
+Example)
+
+(conda) python configure.py 
+
 ```
 
 If the configuration was successful, the output should tell you that things related to SIP will be installed in your virtual environment’s folder, and NOT in your global Python that resides in /usr.
@@ -213,7 +216,8 @@ Build configure.py using python command in virtualenv
 
 
 ```
-ex)
+Example)
+
 (conda) python configure.py -d ~/anaconda2/envs/tensorflow_mobilerobot/lib/python2.7/site-packages/   --sip=~/anaconda2/envs/tensorflow_mobilerobot/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake  ~/Qt5.9.2/5.9.2/gcc_64/bin/qmake 
 
 or
