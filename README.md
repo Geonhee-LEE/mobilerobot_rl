@@ -174,7 +174,9 @@ Now is where things get important, as I always prefer to use virtual environment
 
 <pre> tar xvf sip-4.19.6.tar.gz </pre> 
 <pre> cd sip-4.19.6/ </pre> 
-<pre> ~/path/to/virtualenv/python configure.py </pre> (build configure.py using python command in virtualenv )
+
+(Build configure.py using python command in virtualenv)
+<pre> ~/path/to/virtualenv/python configure.py </pre> 
 
 If the configuration was successful, the output should tell you that things related to SIP will be installed in your virtual environment’s folder, and NOT in your global Python that resides in /usr.
 
