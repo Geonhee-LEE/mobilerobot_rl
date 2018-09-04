@@ -218,11 +218,9 @@ Build configure.py using python command in virtualenv
 ```
 Example)
 
-(conda) python configure.py -d ~/anaconda2/envs/tensorflow_mobilerobot/lib/python2.7/site-packages/   --sip=~/anaconda2/envs/tensorflow_mobilerobot/bin/sip --sip-incdir=../sip-4.19.3/siplib/ --qmake  ~/Qt5.9.2/5.9.2/gcc_64/bin/qmake 
-
-or
-
 (conda) python configure.py
+
+
 ```
 
 
