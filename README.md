@@ -157,7 +157,11 @@ Next, adjust the permissions and install Qt:
 
 
 <pre>  chmod +x qt-opensource-linux-x64-5.9.2.run </pre> 
+
 <pre> ./qt-opensource-linux-x64-5.9.2.run </pre> 
+
+When you install the Qt-qreator, you select the checkbox about gcc module. 
+In my case, I choiced the Desktop gcc 64-bit checkbox under Qt 5.9.2.
 
 Now, that should have installed Qt5.x on your Ubuntu installation, it is time to install PyQt5 such that it uses Qt5 with Python 2.7. The key in this setup procedure is to build PyQt5 yourself.
 
