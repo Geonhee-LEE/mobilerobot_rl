@@ -9,11 +9,13 @@ We are preparing a four-step reinforcement learning tutorial.
 
 
 ## Installation
+
 To do this tutorial, you need to install Tensorflow, Keras and Anaconda with Ubuntu 16.04 and ROS kinetic.
 http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 
 ### Anaconda
+
 You can download Anaconda 5.2[https://www.anaconda.com/download/#linux] for Python 2.7 version.
 
 After downloading Andaconda, go to the directory in located download file and enter the follow command.
@@ -28,6 +30,7 @@ After installing Anaconda,
 If Anaconda is installed, you can see Python 2.7.xx :: Anaconda, Inc..
 
 ### ROS dependency packages
+
 To use ROS and Anaconda together, you must additionally install ROS dependency packages.
 
 <pre>$ pip install -U rosinstall msgpack empy defusedxml netifaces </pre>
@@ -45,6 +48,7 @@ Activate virtual environment
 conda <pre>$ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.8.0-cp27-none-linux_x86_64.whl</pre>
 
 #### Keras
+
 Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow.
 
 conda <pre> $ pip install keras </pre>
@@ -62,6 +66,7 @@ conda <pre> $ pip install keras </pre>
 
 
 #### Machine Learning packages
+
 WARNING: Please install turtlebot3, turtlebot3_msgs and turtlebot3_simulations package before installing this package.
 
 <pre> cd ~/catkin_ws/src/ </pre> 
