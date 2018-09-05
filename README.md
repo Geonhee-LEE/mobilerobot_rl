@@ -245,4 +245,8 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 
 [5]. https://github.com/lakehanne/soft-neuro-adapt 
 
+[6]. https://pypi.org/project/pyros_setup/
 
+[7]. https://github.com/pyros-dev/catkin_pip
+
+[8]. https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
