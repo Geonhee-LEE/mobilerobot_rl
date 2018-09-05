@@ -51,12 +51,38 @@ conda(cpu) <pre> pip install --ignore-installed --upgrade https://storage.google
 conda(gpu), only cuda9.0 supported <pre> pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.1-cp27-none-linux_x86_64.whl</pre>
 
 
-#### Keras
+##### Keras
 
 Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow.
 
 conda <pre> pip install keras </pre>
 
+
+#### Pytorch (https://pytorch.org/)
+
+<pre> conda create -n pytorch python=2.7 or 3.5 </pre>
+
+<pre> source activate pytorch </pre>
+
+<pre> 
+ pip install torch torchvision
+
+ or
+
+ pip3 install torch torchvision
+</pre>
+
+<pre> source /opt/ros/kinetic/setup.bash  </pre>
+
+I didn't check exactly, it is neccesary components [5][6][7][8].
+```
+sudo apt-get install python-dev
+git clone https://github.com/lakehanne/soft-neuro-adapt
+cd soft-neuro-adapt
+pip3 install -r requirements.txt 
+pip3 install pyros_setup
+pip3 install netifaces rospkg
+```
 #### Install requirements and clone turtlebot packages
 
 <pre> sudo apt-get install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation ros-kinetic-interactive-markers </pre> 
