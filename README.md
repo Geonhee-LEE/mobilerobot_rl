@@ -226,6 +226,7 @@ Example)
 
 
 <pre> make</pre> 
+
 <pre> make install</pre> 
 
 
@@ -236,12 +237,12 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 
 [1]. http://emanual.robotis.com/docs/en/platform/turtlebot3/machine_learning/#machine-learning
 
-[2]. https://github.com/erlerobot/gym-gazebo
+[2]. https://github.com/erlerobot/gym-gazebo 
 
-[3]. http://wiki.ros.org/openai_ros
+[3]. http://wiki.ros.org/openai_ros 
 
 [4]. http://scriptedonachip.com/pytorch-ros
 
-[5]. https://github.com/lakehanne/soft-neuro-adapt
+[5]. https://github.com/lakehanne/soft-neuro-adapt 
 
 
