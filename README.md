@@ -65,11 +65,13 @@ conda <pre> pip install keras </pre>
 <pre> source activate pytorch </pre>
 
 <pre> 
+
  pip install torch torchvision
 
  or
 
  pip3 install torch torchvision
+ 
 </pre>
 
 <pre> source /opt/ros/kinetic/setup.bash  </pre>
