@@ -156,7 +156,7 @@ batch_size	64	Size of a group of training samples.
 train_start	64	Start training if the replay memory size is greater than 64.
 memory	1000000	The size of replay memory.
 
-#### Run Machine Learning
+#### Run Machine Learning(Tensorflow)
 
 <pre> export TURTLEBOT3_MODEL=burger </pre> 
 <pre>  roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch</pre> 
