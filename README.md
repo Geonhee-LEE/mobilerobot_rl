@@ -103,11 +103,14 @@ WARNING: Please install turtlebot3, turtlebot3_msgs and turtlebot3_simulations p
 <pre> git clone https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning.git </pre> 
 <pre> cd ~/catkin_ws && catkin_make</pre> 
 
-Set parameters
+##### Set parameters
+
 The goal of DQN Agent is to get the TurtleBot3 to the goal avoiding obstacles. When TurtleBot3 gets closer to the goal, it gets a positive reward, and when it gets farther it gets a negative reward. The episode ends when the TurtleBot3 crashes on an obstacle or after a certain period of time. During the episode, TurtleBot3 gets a big positive reward when it gets to the goal, and TurtleBot3 gets a big negative reward when it crashes on an obstacle.
 
 
-Set state
+
+##### Set state
+
 State is an observation of environment and describes the current situation. Here, state_size is 26 and has 24 LDS values, distance to goal, and angle to goal.
 
 Turtlebot3’s LDS default is set to 360. You can modify sample of LDS at turtlebot3/turtlebot3_description/urdf/turtlebot3_burger.gazebo.xacro.
@@ -156,6 +159,7 @@ This tutorial has been learned using DQN. DQN is a reinforcement learning method
 |batch_size     |   64     | Size of a group of training samples. |
 |train_start    |   64     | Start training if the replay memory size is greater than 64.|
 |memory         |  1000000 | The size of replay memory.|
+
 
 
 #### Run Machine Learning(Tensorflow)
