@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlebot3_modified_dqn</name>
+  <version>1.0.0</version>
+  <description>
+    The turtlebot3_modified_dqn package includes applications using reinforcement learning with DQN (Deep Q-Learning).
+  </description>
+  <license>Apache 2.0</license>
+  <author email="gunhee6392@gmail.com">Gilbert</author>
+  <maintainer email="gunhee6392@gmail.com">Pyo</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+</package>

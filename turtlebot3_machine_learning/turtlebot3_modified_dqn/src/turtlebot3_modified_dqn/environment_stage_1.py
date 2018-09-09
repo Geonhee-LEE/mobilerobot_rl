@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #################################################################################
-# Copyright 2018 Geonhee CO., LTD.
+# Copyright 2018 ROBOTIS CO., LTD.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 # limitations under the License.
 #################################################################################
 
-# Authors: Geonhee #
+# Authors: Gilbert #
 
 import rospy
 import numpy as np
@@ -91,8 +91,8 @@ class Env():
 
     def setReward(self, state, done, action):
         yaw_reward = []
-        current_distance = state[-1]    # the last element
-        heading = state[-2]             # the second-last element`
+        current_distance = state[-1]
+        heading = state[-2]
 
         for i in range(5):
             angle = -pi / 4 + heading + (pi / 8 * i) + pi / 2
