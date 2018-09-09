@@ -124,8 +124,7 @@ Turtlebot3’s LDS default is set to 360. You can modify sample of LDS at turtle
 </scan>
 ```
   
-sample = 360	sample = 24
-
+  
 
 ### [Set action](#set-action)
 Action is what an agent can do in each state. Here, turtlebot3 has always 0.15 m/s of linear velocity. angular velocity is determined by action.
