@@ -158,25 +158,6 @@ This tutorial has been learned using DQN. DQN is a reinforcement learning method
 |memory         |  1000000 | The size of replay memory.|
 
 
-
-Set reward
-When turtlebot3 takes an action in a state, it receives a reward. The reward design is very important for learning. A reward can be positive or negative. When turtlebot3 gets to the goal, it gets big positive reward. When turtlebot3 collides with an obstacle, it gets big negative reward. If you want to apply your reward design, modify setReward function at /turtlebot3_machine_learning/turtlebot3_dqn/src/turtlebot3_dqn/environment_stage_#.py.
-
-Set hyper parameters
-This tutorial has been learned using DQN. DQN is a reinforcement learning method that selects a deep neural network by approximating the action-value function(Q-value). Agent has follow hyper parameters at /turtlebot3_machine_learning/turtlebot3_dqn/nodes/turtlebot3_dqn_stage_#.
-
-Hyper parameter	default	description
-episode_step	6000	The time step of one episode.
-target_update	2000	Update rate of target network.
-discount_factor	0.99	Represents how much future events lose their value according to how far away.
-learning_rate	0.00025	Learning speed. If the value is too large, learning does not work well, and if it is too small, learning time is long.
-epsilon	1.0	The probability of choosing a random action.
-epsilon_decay	0.99	Reduction rate of epsilon. When one episode ends, the epsilon reduce.
-epsilon_min	0.05	The minimum of epsilon.
-batch_size	64	Size of a group of training samples.
-train_start	64	Start training if the replay memory size is greater than 64.
-memory	1000000	The size of replay memory.
-
 #### Run Machine Learning(Tensorflow)
 
 <pre> export TURTLEBOT3_MODEL=burger </pre> 
