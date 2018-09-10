@@ -45,11 +45,32 @@ class Env():
         self.respawn_goal = Respawn()
 
     def getGoalDistace(self):
+        '''
+        Calculate the range between robot and goal and Return the range.
+
+        Parameters:
+        - 
+
+        Return:
+        - goal distance from robot's position to the Goal position.
+        '''
+
+        # hypot(x,y): Return the Euclidean norm, sqrt(x*x + y*y)
+        # round(x[, n]): Return x rounded to n digits from the decimal point
         goal_distance = round(math.hypot(self.goal_x - self.position.x, self.goal_y - self.position.y), 2)
 
         return goal_distance
 
     def getOdometry(self, odom):
+        '''
+        Calculate heading value which yaw subtract from goal_angle based on Odometry message achieved from /Odom topic
+
+        Parameters:
+        - odom: Odometry topic message, which the topic name is '/odom'
+        
+        Return:
+        - 
+        '''
         self.position = odom.pose.pose.position
         orientation = odom.pose.pose.orientation
         orientation_list = [orientation.x, orientation.y, orientation.z, orientation.w]
@@ -64,9 +85,22 @@ class Env():
         elif heading < -pi:
             heading += 2 * pi
 
+        # heading variable mean the difference between robot's orientation and goal
         self.heading = round(heading, 2)
 
     def getState(self, scan):
+        '''
+        Process laser data to be satisfied with constraint and integrate laser data and heading and distance variables into one array.
+        
+        Parameters:
+        - scan: Scan topic message using Lidar sensor, which the topic name is '/scan'
+        
+        Return:
+        - state: arrays of processed scan_range data and heading, current_distance which means the distance between robot and goal
+                
+        - done: whether minimum value of scan data is negative, which means the robot collides obstacle.
+    
+        '''
         scan_range = []
         heading = self.heading
         min_range = 0.13
@@ -80,23 +114,45 @@ class Env():
             else:
                 scan_range.append(scan.ranges[i])
 
+        # Its
         if min_range > min(scan_range) > 0:
             done = True
 
         current_distance = round(math.hypot(self.goal_x - self.position.x, self.goal_y - self.position.y),2)
+        
+        # If current_distance is lower than 0.2, we can say the robot reaches the goal.
         if current_distance < 0.2:
             self.get_goalbox = True
 
+        # Return arrays, done
         return scan_range + [heading, current_distance], done
 
     def setReward(self, state, done, action):
-        yaw_reward = []
-        current_distance = state[-1]
-        heading = state[-2]
+        '''
+        Design the reward function according to conditions.
+        
+        Parameters:
+        - state: It is achieved through getState(scan) function, which consists of [scan_range, heading, current_distance] array
+        - done: whether robot crashes obstacle
+        - action: It is achieved through getAction(state) function in dqn_stage file, which is decided by Q-function
+        
+        Return:
+        - reward: It is calculated by following
 
-        for i in range(5):
-            angle = -pi / 4 + heading + (pi / 8 * i) + pi / 2
+        '''        
+        yaw_reward = []
+        current_distance = state[-1]    # current_distance component of the state array from getState(scan)
+        heading = state[-2]             # heading componet of the state array from getState(scan) 
+
+        # Reward function is design follwing https://www.youtube.com/watch?time_continue=118&v=807_cByUBSI
+        for step in range(5):
+            angle = -math.pi / 4 + heading + (math.pi / 8 * step) + math.pi / 2
+            
+            # math.fabs(x): Return the absolute value of x.
+            # math.modf(x): Return the fractional and integer parts of x. Both results carry the sign of x and are floats. modf[0]: decimal value, modf[1]: integer value
             tr = 1 - 4 * math.fabs(0.5 - math.modf(0.25 + 0.5 * angle % (2 * math.pi) / math.pi)[0])
+            
+            # yaw_reward is respectively calculated follwing five actions
             yaw_reward.append(tr)
 
         distance_rate = 2 ** (current_distance / self.goal_distance)
@@ -111,6 +167,8 @@ class Env():
             rospy.loginfo("Goal!!")
             reward = 200
             self.pub_cmd_vel.publish(Twist())
+            
+            # getPosition(): reassign goal position and respawn model in Gazebo
             self.goal_x, self.goal_y = self.respawn_goal.getPosition(True, delete=True)
             self.goal_distance = self.getGoalDistace()
             self.get_goalbox = False
@@ -118,7 +176,22 @@ class Env():
         return reward
 
     def step(self, action):
+        '''
+        Publish "cmd_vel" topic to move the robot and get states.
+        
+        Parameters:
+        - action: It is achieved through getAction(state) function in dqn_stage file, which is decided by Q-function
+        
+        Return:
+        - np.asarray(state): state array is composed of scan_range data, heading, current_distance.  
+        - reward: reward acieved from setReward(state, done, action) function 
+        - done: whether robot crashes obstacle
+
+        '''   
+
         max_angular_vel = 1.5
+
+        # action_size: 5, decide to angular velocity according to action(0~4) which has maximum Q-function
         ang_vel = ((self.action_size - 1)/2 - action) * max_angular_vel * 0.5
 
         vel_cmd = Twist()
@@ -136,9 +209,22 @@ class Env():
         state, done = self.getState(data)
         reward = self.setReward(state, done, action)
 
+        # numpy.asarray(a, dtype=None, order=None): Convert the input to an array.
         return np.asarray(state), reward, done
 
+
     def reset(self):
+        '''
+        Reset GAZEBO environment
+        
+        Parameters:
+        - 
+        
+        Return:
+        - np.asarray(state): state array is composed of scan_range data, heading, current_distance.  
+
+        '''   
+        
         rospy.wait_for_service('gazebo/reset_simulation')
         try:
             self.reset_proxy()
