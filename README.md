@@ -1,14 +1,3 @@
-# Machine Learning
-Machine learning is a data analysis technique that teaches computers to recognize what is natural for people and animals - learning through experience. There are three types of machine learning: supervised learning, unsupervised learning, reinforcement learning.
-
-This application is reinforcement learning with DQN (Deep Q-Learning). The reinforcement learning is concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward.
-
-
-This shows reinforcement learning with TurtleBot3 in gazebo. This reinforcement learning is applied DQN(Deep Q-Learning) algorithm with LDS.
-We are preparing a four-step reinforcement learning tutorial. 
-
-
-
 ## Installation
 
 To do this tutorial, you need to install Tensorflow, Keras and Anaconda with Ubuntu 16.04 and ROS kinetic.
