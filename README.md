@@ -258,6 +258,14 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 
 # To do
 
+- [ ] Rainbow DQN
+- [ ] DDPG
+- [ ] A3C
+- [ ] TRPO
+- [ ] PPO
+- [ ] Guided Policy Search
+- [ ] Pytorch-version
+
 
 # reference 
 
