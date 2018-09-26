@@ -264,6 +264,7 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 - [ ] TRPO
 - [ ] PPO
 - [ ] Guided Policy Search
+- [ ] Generative Adversarial Imitation Learning
 - [ ] Pytorch 
 
 
