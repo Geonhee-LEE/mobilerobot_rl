@@ -266,6 +266,7 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 - [ ] Guided Policy Search
 - [ ] Generative Adversarial Imitation Learning
 - [ ] State change, path tracking 
+- [ ] Autonomous driving
 - [ ] Pytorch 
 
 
