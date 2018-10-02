@@ -66,6 +66,7 @@ conda <pre> pip install keras </pre>
 <pre> source /opt/ros/kinetic/setup.bash  </pre>
 
 I didn't check exactly, it is neccesary components [5][6][7][8].
+
 ```
 sudo apt-get install python-dev
 git clone https://github.com/lakehanne/soft-neuro-adapt
