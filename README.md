@@ -54,15 +54,12 @@ conda <pre> pip install keras </pre>
 
 <pre> source activate pytorch </pre>
 
-<pre> 
-
- pip install torch torchvision
+<pre>  pip install torch torchvision
 
  or
 
  pip3 install torch torchvision
- 
-</pre>
+ </pre>
 
 <pre> source /opt/ros/kinetic/setup.bash  </pre>
 
@@ -259,6 +256,7 @@ Example)
 Now, assuming there are no errors, you should be able to run ‘import PyQt5’ in your virtual environment running Python 2.7!
 
 
+
 # To do
 
 - [ ] Rainbow DQN
@@ -271,6 +269,7 @@ Now, assuming there are no errors, you should be able to run ‘import PyQt5’ 
 - [ ] State change, path tracking 
 - [ ] Autonomous driving
 - [ ] Pytorch 
+
 
 
 # reference 
